@@ -35,7 +35,7 @@ const NavLists = ({ isOpen, closeNavbar }: Props) => {
       }`}
     >
       <ul
-        className={`flex flex-col items-center gap-1 p-3 text-red-500 text-lg uppercase bg-white rounded-xl m-2 tracking-wider left-0 right-0  ${
+        className={`flex flex-col items-center gap-1 p-3 text-red-500 text-lg uppercase bg-white rounded-xl m-2 tracking-wider left-0 right-0 ${
           isOpen
             ? "translate-x-0 transition-transform duration-300"
             : "-translate-x-[calc(100%+8px)]"
@@ -44,7 +44,7 @@ const NavLists = ({ isOpen, closeNavbar }: Props) => {
       >
         <NavLink to={"/"}>
           {({ isActive }) => (
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 font-semibold">
               Home
               <span className={isActive ? "visible" : "invisible"}>
                 <GiCheckMark />
@@ -54,7 +54,7 @@ const NavLists = ({ isOpen, closeNavbar }: Props) => {
         </NavLink>
         <NavLink to={"/guide"}>
           {({ isActive }) => (
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 font-semibold">
               Guide
               <span className={isActive ? "visible" : "invisible"}>
                 <GiCheckMark />
