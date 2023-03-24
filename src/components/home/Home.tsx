@@ -8,7 +8,7 @@ import VIPLocation from "./vip_location/VIPLocation";
 const Home = () => {
   const [category, setCategory] = useState("troopMovements");
   return (
-    <div className="h-screen flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <CategoryButtonsGroup setCategory={setCategory} />
       <div className="h-[2px] w-full bg-red-500"></div>
       {category === "troopMovements" && <TroopMovements />}

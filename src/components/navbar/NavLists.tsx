@@ -30,7 +30,7 @@ const NavLists = ({ isOpen, closeNavbar }: Props) => {
 
   return (
     <div
-      className={`fixed left-0 right-0 bg-red-100 ${
+      className={`fixed left-0 right-0 bg-red-100 z-50 ${
         isOpen ? "h-screen" : "h-0 transition-all duration-300"
       }`}
     >
