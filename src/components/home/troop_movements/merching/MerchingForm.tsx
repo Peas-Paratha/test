@@ -1,12 +1,35 @@
-import React from "react";
-import LocationAndDirection from "./LocationAndDirection";
+import React, { ChangeEvent } from "react";
+import Direction from "./Direction";
+import LocationAndDirection from "./Location";
 import VehicleCounts from "./VehicleCounts";
 
-const MerchingForm = () => {
+type Vehicle = {
+  FAW: number;
+  jeep: number;
+  tank: number;
+  policeTruck: number;
+  lightArmouredVehicle: number;
+  onFoot: number;
+};
+
+type Props = {
+  vehicles: Vehicle;
+  onChangeVehicles: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChangeDirection: (e: ChangeEvent<HTMLInputElement>) => void;
+  setLatLng: (lat: number, lng: number) => void;
+};
+
+const MerchingForm = ({
+  vehicles,
+  onChangeVehicles,
+  onChangeDirection,
+  setLatLng,
+}: Props) => {
   return (
     <>
-      <VehicleCounts />
-      <LocationAndDirection />
+      <LocationAndDirection setLatLng={setLatLng} />
+      <Direction onChangeDirection={onChangeDirection} />
+      <VehicleCounts vehicles={vehicles} onChangeVehicles={onChangeVehicles} />
     </>
   );
 };
