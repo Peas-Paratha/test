@@ -3,16 +3,17 @@ import CampingForm from "./camping/CampingForm";
 import MerchingForm from "./merching/MerchingForm";
 import Status from "./Status";
 import TroopCount from "./TroopCount";
+import TroopMovementSubmitBtn from "./TroopMovementSubmitBtn";
 import Uniform from "./Uniform";
 import WeaponTypes from "./WeaponTypes";
 
 const TroopMovementsForm = () => {
   const [troopMovementsFormValues, setTroopMovementsFormValues] = useState({
     troopCounts: {
-      soldier: 0,
-      police: 0,
-      BGF: 0,
-      others: 0,
+      soldier: "",
+      police: "",
+      BGF: "",
+      others: "",
     },
     weapons: {
       MA3: false,
@@ -22,14 +23,14 @@ const TroopMovementsForm = () => {
       Unknown: false,
     },
     uniform: "",
-    status: "",
+    status: "merching",
     vehicles: {
-      FAW: 0,
-      jeep: 0,
-      tank: 0,
-      policeTruck: 0,
-      lightArmouredVehicle: 0,
-      onFoot: 0,
+      FAW: "",
+      jeep: "",
+      tank: "",
+      policeTruck: "",
+      lightArmouredVehicle: "",
+      onFoot: "",
     },
     location: {
       Lat: 0,
@@ -138,7 +139,10 @@ const TroopMovementsForm = () => {
       />
       <WeaponTypes onChangeWeapons={onChangeWeapons} />
       <Uniform onChangeUniform={onChangeUniform} />
-      <Status onChangeStatus={onChangeStatus} />
+      <Status
+        onChangeStatus={onChangeStatus}
+        status={troopMovementsFormValues.status}
+      />
       {troopMovementsFormValues.status === "merching" ? (
         <MerchingForm
           vehicles={troopMovementsFormValues.vehicles}
@@ -155,6 +159,7 @@ const TroopMovementsForm = () => {
           />
         )
       )}
+      <TroopMovementSubmitBtn />
     </div>
   );
 };

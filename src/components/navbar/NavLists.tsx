@@ -52,6 +52,16 @@ const NavLists = ({ isOpen, closeNavbar }: Props) => {
             </div>
           )}
         </NavLink>
+        <NavLink to={"/bounty"}>
+          {({ isActive }) => (
+            <div className="flex items-center gap-1 font-semibold">
+              Bounty List
+              <span className={isActive ? "visible" : "invisible"}>
+                <GiCheckMark />
+              </span>
+            </div>
+          )}
+        </NavLink>
         <NavLink to={"/guide"}>
           {({ isActive }) => (
             <div className="flex items-center gap-1 font-semibold">

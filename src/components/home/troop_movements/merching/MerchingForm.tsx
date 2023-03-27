@@ -4,12 +4,12 @@ import LocationAndDirection from "./Location";
 import VehicleCounts from "./VehicleCounts";
 
 type Vehicle = {
-  FAW: number;
-  jeep: number;
-  tank: number;
-  policeTruck: number;
-  lightArmouredVehicle: number;
-  onFoot: number;
+  FAW: string;
+  jeep: string;
+  tank: string;
+  policeTruck: string;
+  lightArmouredVehicle: string;
+  onFoot: string;
 };
 
 type Props = {

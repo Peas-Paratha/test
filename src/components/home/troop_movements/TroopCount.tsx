@@ -1,10 +1,10 @@
 import React, { ChangeEvent } from "react";
 
 type TroopCounts = {
-  soldier: number;
-  police: number;
-  BGF: number;
-  others: number;
+  soldier: string;
+  police: string;
+  BGF: string;
+  others: string;
 };
 
 type Props = {

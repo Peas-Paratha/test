@@ -2,12 +2,12 @@ import React, { ChangeEvent } from "react";
 import { alpha } from "../TroopCount";
 
 type Vehicle = {
-  FAW: number;
-  jeep: number;
-  tank: number;
-  policeTruck: number;
-  lightArmouredVehicle: number;
-  onFoot: number;
+  FAW: string;
+  jeep: string;
+  tank: string;
+  policeTruck: string;
+  lightArmouredVehicle: string;
+  onFoot: string;
 };
 
 type Props = {
@@ -48,7 +48,7 @@ const VehicleCounts = ({ vehicles, onChangeVehicles }: Props) => {
             type="number"
             id="lightArmouredVehicle"
             className="w-8 flex-1 border-b-2 border-red-500 outline-none text-right"
-            placeholder="Enter the number of soldiers merching on foot"
+            placeholder="0"
             value={vehicles.lightArmouredVehicle}
             name="lightArmouredVehicle"
             onChange={onChangeVehicles}
