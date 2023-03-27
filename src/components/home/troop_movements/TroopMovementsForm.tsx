@@ -129,8 +129,6 @@ const TroopMovementsForm = () => {
     });
   };
 
-  console.log(troopMovementsFormValues);
-
   return (
     <div className="w-full flex flex-col gap-3">
       <TroopCount
